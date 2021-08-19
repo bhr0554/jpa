@@ -1,5 +1,6 @@
 package com.study.jpa;
 
+import com.study.jpa.entity.User;
 import com.study.jpa.repository.UserRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,12 +11,14 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
 import javax.transaction.Transactional;
 
 import java.util.List;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
+/*@RunWith(SpringRunner.class)
+@SpringBootTest*/
 public class SampleTest {
     private static EntityManager manager;
 
@@ -37,5 +40,13 @@ public class SampleTest {
         List list = repository.findAll();
 
         System.out.println(list);
+    }
+
+    @Test
+    @Transactional
+    public void nativeJpaTest() {
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("study");
+
+        emf.close();
     }
 }
