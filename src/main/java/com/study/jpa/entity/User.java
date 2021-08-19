@@ -1,5 +1,6 @@
 package com.study.jpa.entity;
 
+import com.study.jpa.entity.enums.Gender;
 import lombok.Getter;
 import lombok.Setter;
 

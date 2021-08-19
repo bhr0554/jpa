@@ -1,14 +1,11 @@
 package com.study.jpa;
 
-import com.study.jpa.entity.Gender;
+import com.study.jpa.entity.enums.Gender;
 import com.study.jpa.entity.User;
 import com.study.jpa.repository.UserRepository;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

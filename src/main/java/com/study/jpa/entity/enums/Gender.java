@@ -1,4 +1,4 @@
-package com.study.jpa.entity;
+package com.study.jpa.entity.enums;
 
 public enum Gender {
     FEMALE,
