@@ -30,15 +30,10 @@ public class User {
     private LocalDate birth;
 
     @Column(nullable = false, length = 20)
-    private String cellPhone;
+    private String cell_phone;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
+    @Column(nullable = true)
     private Gender gender;
 
-}
-
-enum Gender {
-    FEMALE,
-    MALE
 }
